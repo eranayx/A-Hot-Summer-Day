@@ -1,0 +1,89 @@
+.side-panel {
+    background-color: rgba(255, 222, 99, 0.69);
+    flex-grow: 1;
+    width: 40%;
+}
+
+.game-title {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    rotate: -5deg;
+    -unity-font: url("project://database/Assets/Fonts/LemonJelly.ttf?fileID=12800000&guid=ccdb12aebf01abb40947fbdd6865edfe&type=3#LemonJelly");
+    font-size: 176px;
+    -unity-font-definition: initial;
+    color: rgb(58, 67, 89);
+    -unity-text-align: upper-center;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.button-list {
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    flex-grow: 1;
+}
+
+.button {
+    font-size: 56px;
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/Fonts/WinkyRough-Regular.ttf?fileID=12800000&guid=c4525845a21f7dc4f9fc899175343a48&type=3#WinkyRough-Regular");
+    background-color: rgb(255, 184, 77);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left-color: rgb(255, 112, 46);
+    border-right-color: rgb(255, 112, 46);
+    border-top-color: rgb(255, 112, 46);
+    border-bottom-color: rgb(255, 112, 46);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    color: rgb(54, 67, 99);
+    -unity-font-style: bold-and-italic;
+    -unity-text-align: middle-center;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    height: 100%;
+}
+
+.button:hover {
+    rotate: 3deg;
+    background-color: rgb(255, 143, 93);
+    border-left-color: rgb(255, 79, 26);
+    border-right-color: rgb(255, 79, 26);
+    border-top-color: rgb(255, 79, 26);
+    border-bottom-color: rgb(255, 79, 26);
+}
+
+.button-background {
+    flex-grow: 0;
+    height: 22.5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    transition-duration: 0.25s;
+    margin-right: 0;
+    margin-left: 0;
+    rotate: -1deg;
+}
+
+.button-background:hover {
+    background-image: url("project://database/Assets/Sprites/dotted%20bg.png?fileID=21300000&guid=55eb6484df357dd4688a3ea375396885&type=3#dotted bg");
+    rotate: -2deg;
+    -unity-background-scale-mode: scale-and-crop;
+}

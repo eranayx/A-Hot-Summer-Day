@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=2df41a42f650a994f994adc5e3dae073&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement name="MainBackground" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/main%20menu%20bg.jpg?fileID=21300000&amp;guid=bc0231ecc70f7da4982035269e9133ee&amp;type=3#main menu bg&quot;); -unity-background-scale-mode: scale-and-crop; opacity: 1;">
+        <ui:VisualElement name="SidePanel" class="side-panel">
+            <ui:Label tabindex="-1" text="A Hot&#10;Summer Day" parse-escape-sequences="true" display-tooltip-when-elided="true" name="GameTItle" class="game-title" style="padding-right: 0; padding-left: 0;" />
+            <ui:VisualElement name="ButtonList" class="button-list">
+                <ui:VisualElement name="ButtonBackground" class="button-background">
+                    <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayButton" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ButtonBackground" class="button-background">
+                    <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" class="button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
