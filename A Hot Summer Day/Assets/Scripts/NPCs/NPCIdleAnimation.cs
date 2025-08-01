@@ -54,3 +54,5 @@ public class NPCIdleAnimation : StateMachineBehaviour
         _idleTime = 0;        
     }
 }
+
+// Credits: https://www.youtube.com/watch?v=OCd7terfNxk
