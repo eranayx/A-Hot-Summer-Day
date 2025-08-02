@@ -9,8 +9,9 @@ public abstract class Shop : MonoBehaviour
 {
     public class OnUpgradeEventArgs : EventArgs
     {
-        public Shop shop;  // Used to determin what notification should be sent
+        public Shop shop;  // Used to determine what notification should be sent
         public bool isMaxLevel = false;
+        public bool hiredWorker = false;
     }
 
     public static event EventHandler<OnUpgradeEventArgs> OnUpgraded;
@@ -86,7 +87,7 @@ public abstract class Shop : MonoBehaviour
         {
             Player.Instance.AddMoney(GetWorkerHirePrice() * -1);
             IncreaseShopMultiplier(_workerMultiplierBonus);
-            OnUpgraded?.Invoke(this, new OnUpgradeEventArgs { });
+            OnUpgraded?.Invoke(this, new OnUpgradeEventArgs { hiredWorker = true });
 
             IsWorkerHired = true;
             return true;

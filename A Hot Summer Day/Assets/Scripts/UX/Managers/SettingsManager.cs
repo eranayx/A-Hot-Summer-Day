@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,6 +6,7 @@ using UnityEngine.UI;
 public class SettingsManager : MonoBehaviour
 {
     public static SettingsManager Instance { get; private set; }
+    public static bool isSettingsLoaded = false;
 
     [SerializeField] private Slider _musicSlider;
     [SerializeField] private Slider _sfxSlider;
@@ -29,7 +31,7 @@ public class SettingsManager : MonoBehaviour
         _codeInput.text = string.Empty;
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
         _musicSlider.onValueChanged.AddListener(AudioManager.Instance.SetMusicVolume);
         _sfxSlider.onValueChanged.AddListener(AudioManager.Instance.SetSFXVolume);
@@ -58,10 +60,13 @@ public class SettingsManager : MonoBehaviour
             Player.Instance.isInputtingText = false;
         });
 
-        LoadPlayerPrefs();
+        yield return new WaitUntil(() => isSettingsLoaded);
+
+        GetComponent<CanvasGroup>().alpha = 1.0f;
+        gameObject.SetActive(false);
     }
 
-    private void LoadPlayerPrefs()
+    public void LoadPlayerPrefs()
     {
         if (PlayerPrefs.HasKey(PlayerPrefsKeys.musicKey))
         {
@@ -87,6 +92,8 @@ public class SettingsManager : MonoBehaviour
             _notificationToggle.isOn = value;
             Player.Instance.isNotificationsEnabled = value;
         }
+
+        isSettingsLoaded = true;
     }
 
     private void NotificationToggle_OnValueChanged(bool value)

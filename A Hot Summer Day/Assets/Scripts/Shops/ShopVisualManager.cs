@@ -28,7 +28,10 @@ public class ShopVisualManager : MonoBehaviour
 
     private void Shop_OnUpgraded(object sender, Shop.OnUpgradeEventArgs e)
     {
-        TrySpawnNextVisual();
+        if (!e.hiredWorker)
+        {
+            TrySpawnNextVisual();
+        }
     }
 
     private void TrySpawnNextVisual()
